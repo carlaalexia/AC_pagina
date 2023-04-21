@@ -1,44 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,200&display=swap');
+
+
 body{
     background-image: url(/imagenes/fondo1.jpg);
     background-size: cover;
     background-repeat: no-repeat;
+    font-family: 'Raleway', sans-serif;
 }
 
 section{
 
-    display: flex;
-    width: 600px;
-    height: 430px;
-    align-tracks: center;
-    position: absolute;
-    top: 50%;
-    left: 60%;
-    transform: translate(-50%, -50%);
-    
+  display: flex;
+  width: 200px;
+  height: 350px;
+  align-tracks: center;
+  position: absolute;
+  top: 40%;
+  left: 44%;
+  transform: translate(-50%, -50%);
+  
 
 }
 
-section img {
-    width: 0px;
-    flex-grow: 1;
-    object-fit: cover;
-    opacity: .8;
-    transition: .5s ease;
-    
+.image {
+  width: 0px;
+  flex-grow: 1;
+  object-fit:fill;
+  opacity: .8;
+  transition: .5s ease;
+  
 }
 
 section img:hover{
-    cursor: crosshair;
-    width: 300px;
-    opacity: 1;
-    filter: contrast(120%);
+  cursor: crosshair;
+  width: 500px;
+  opacity: 1;
+  filter: contrast(120%);
 
 }
+
+.contenedor{
+  width: 100%;
+  display: relative;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  margin-left: -40px;
+  
+  
+}
+
+.contenedor figure{
+  position:relative;
+  height: 450px;
+  cursor: pointer;
+  width: 160px;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0px 15px 25px rgba(0,0,0,0.50);
+  
+}
+.contenedor figure img{
+  width: 100%;
+  height: 100%;
+  transition: all 400ms ease-out;
+  will-change: transform;
+  margin-inline-end: auto;
+  
+}
+.contenedor figure .capa{
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,103,123,0.7);
+  transition: all 400ms ease-out;
+  opacity: 0;
+  visibility: hidden;
+  text-align: center;
+  
+}
+.contenedor figure:hover > .capa {
+  opacity: 1;
+  visibility: visible;
+}
+.contenedor figure:hover > .capa h3{
+  margin-top: 70px;
+  margin-bottom: 15px;
+}
+.contenedor figure:hover > img{
+  transform: scale(1.4);
+}
+.contenedor figure .capa h3{
+  color: #fff;
+  font-weight: 300;
+  margin-bottom: 120px;
+  transition: all 400ms ease-out;
+   margin-top: 30px;
+}
+.contenedor figure .capa p{
+  color: #fff;
+  font-size: 15px;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 220px;
+  margin: auto;
+}
+
+
+
 
 .titulo{
     width: 400px;
     color: #f72;
     margin-left: 20px;
+    margin-top: 50px;
     font-family: 'Poppins', sans-serif;
     font-size: 55px;
     text-transform: uppercase;
@@ -53,8 +129,8 @@ section img:hover{
     position: absolute;
     width: 400px;
     left: 20%;
-    margin-left: -200px;
-    top: 90%;
+    margin-left: -230px;
+    top: 85%;
     margin-top: -40px;
     border-radius: 80px;
   }
